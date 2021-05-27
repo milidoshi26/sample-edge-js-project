@@ -21,6 +21,6 @@ jobs:
         - name: Install Dependencies
           run: |
             npm install
-            node sample-edge.js
+            EDGE_USE_CORECLR=1 node sample-edge.js
 
 
