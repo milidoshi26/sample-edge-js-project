@@ -19,8 +19,8 @@ jobs:
           with:
             node-version: ${{ matrix.node_version }}
         - name: Install Dependencies
-          run: |
-            npm install
-            node sample-edge.js
+          run: npm install
+        - name: Run Edge
+          run: node sample-edge.js
 
 
