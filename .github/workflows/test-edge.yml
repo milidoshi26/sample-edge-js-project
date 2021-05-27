@@ -6,6 +6,8 @@ jobs:
     run_edge:
         name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
+        env:
+          EDGE_USE_CORECLR: 1
         strategy:
             fail-fast: false
             matrix:
