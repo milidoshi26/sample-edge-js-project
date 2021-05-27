@@ -1,3 +1,4 @@
+process.env['EDGE_USE_CORECLR'] = 1;
 
 console.log(process.env.PATH);
 var edge = require('edge-js');
