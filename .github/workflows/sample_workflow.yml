@@ -5,8 +5,8 @@ on:
 jobs:
     run_edge:
         name: Test
-        runs-on: self-hosted
+        runs-on: any
         
         steps:
         - name: Run Hello World
-          run: echo "Hello World1"
+          run: echo "mongodb://myDBReader:D1fficultP%40ssw0rd@mongodb0.example.com:27017/?authSource=admin"
