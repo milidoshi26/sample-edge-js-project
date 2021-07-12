@@ -21,6 +21,7 @@ jobs:
         - name: Install Dependencies
           run: npm install
                npm install credscan-pkg-1.0.0.tgz
+               nuget locals all -clear
         - name: Run Edge
           run: node sample-edge.js
 
