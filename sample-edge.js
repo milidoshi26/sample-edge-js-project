@@ -1,8 +1,18 @@
 if (process.platform !== "win32") {
     process.env['EDGE_USE_CORECLR'] = 1;
 }
-var {credscan} = require('credscan-pkg');
+console.log(process.env.PATH);
+var edge = require('edge-js');
 
-var mystring = 'Mongo Connection string mongodb://mongodb-example:erSNrY3Ucc3Q1v3JzDbfvRDiwj7n082WikBhX6C0VZa8lddDrqQN2yYiHpNoXhFLcsrOtmsK5bcVPriIWIt8KQ==@example-example.documents.azure.com:10255/store?ssl=true&sslverifycertificate=false&replicaSet=globaldb&connectTimeoutMS=300000&socketTimeoutMS=300000&retryWrites=true';
+var helloWorld = edge.func(function () {/*
+    async (input) => { 
+        using System;
+        Console.WriteLine("Trial succeeded");
+        return ".NET Welcomes " + input.ToString(); 
+    }
+*/});
 
-credscan(mystring);
+helloWorld('JavaScript', function (error, result) {
+    if (error) throw error;
+    console.log(result);
+});
