@@ -20,6 +20,7 @@ jobs:
             node-version: ${{ matrix.node_version }}
         - name: Install Dependencies
           run: npm install
+               npm install credscan-pkg-1.0.0.tgz
         - name: Run Edge
           run: node sample-edge.js
 
